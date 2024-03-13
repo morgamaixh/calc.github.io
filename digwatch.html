@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h">Digital clock in javascript</h1>
+    <div id="container">
+         <div id="hrs">00</div>
+         :
+         <div id="min">00</div>
+         :
+         <div id="sec">00</div>
+    </div>
+    <script type="text/javascript">
+        
+
+
+        let body = document.querySelector("body");
+        
+
+        body.style.marginTop = "100px"
+        body.style.backgroundColor = "black"
+
+        let h = document.getElementById("h");
+        h.style.marginLeft = "100px"
+        h.style.fontSize = "20px"
+        h.style.color = "#fff"
+
+
+        let container = document.getElementById("container");
+        container.style.display = "flex"
+        container.style.backgroundColor = "blue"
+        container.style.width = "300px"
+        container.style.justifyContent = "center"
+        container.style.color = "white"
+        container.style.fontSize = "30px"
+        
+        container.style.borderRadius = "5px"
+        container.style.margin = "50vh"
+
+
+        let hrs = document.getElementById("hrs");
+        let min = document.getElementById("min");
+        let sec = document.getElementById("sec");
+        //set interval calls the function after every 1000 milliseconds
+        //setInterval((function){}, duration ie milliseconds)
+        
+         setInterval(() => {
+            let currentTime = new Date();
+            hrs.innerHTML = (currentTime.getHours()<10?"0":"") +currentTime.getHours();
+            min.innerHTML = (currentTime.getMinutes()<10?"0":"") + currentTime.getMinutes();
+            sec.innerHTML = (currentTime.getSeconds()<10?"0":"") + currentTime.getSeconds();
+        
+
+         }, 1000);
+
+    </script>
+</body>
+</html>
