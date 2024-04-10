@@ -36,13 +36,13 @@
             </div>
         </div>
         <script>
-            let erase = document.getElementById('delBtn');
+            let x = document.getElementById('delBtn');
             let screen = document.getElementById('display');
             let buttons = document.querySelectorAll('button');
             let clearBtn = document.querySelector('#clearBtn');
             let equalButton = document.getElementById('equalBtn');
             
-           erase.addEventListener('click', (e) => {
+           x.addEventListener('click', (e) => {
             display.value = display.value.string.slice(display.value, 1)
            });
             buttons.forEach(function myFunction(button){
